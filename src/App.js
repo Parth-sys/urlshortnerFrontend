@@ -8,9 +8,6 @@ import {ForgotPas} from "./ForgotPas";
 function App() {
 
 
-
-
-
   return (
 <div>
     <Routes>
