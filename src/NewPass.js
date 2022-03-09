@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import axios from 'axios';
-export function ForgotPas(){
+
+
+export function Newpass(){
 
 
     const [Password,setPassword]=useState(" ");
@@ -9,7 +11,7 @@ export function ForgotPas(){
     const handlePass=async(e)=>{
         e.preventDefault()
         try{
-          var send=await axios.post("http://localhost:5000/verify",{
+          var send=await axios.put("http://localhost:5000/activate",{
             Password,
             
           });
@@ -27,11 +29,13 @@ export function ForgotPas(){
         <div id="formContent">
 
            <form onSubmit={handlePass}>
-            <input type="Password" id="login" className="fadeIn second" name="Email" placeholder="name" required={true} onChange={e=>setPassword(e.target.value)}></input>
-            <input type="submit" className="fadeIn fourth" value="Verify"></input>
+            <input type="Password" id="login" className="fadeIn second" name="Email" placeholder="new password" required={true} onChange={e=>setPassword(e.target.value)}></input>
+            <input type="submit" className="fadeIn fourth" value="set"></input>
             </form>
 
             </div>
         </div>
     )
 }
+
+export default Newpass;

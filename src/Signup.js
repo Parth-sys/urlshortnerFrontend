@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-
+import { useNavigate } from 'react-router-dom';
 export function Signup(){
 
 
@@ -10,7 +10,7 @@ const[lastname,setlastname]=useState(" ");
 const [Email,setEmail]=useState(" ");
 const [password,setpassword]=useState(" ")
 
-
+let navigate=useNavigate();
 
 useEffect(()=>{
 
@@ -26,12 +26,14 @@ useEffect(()=>{
         password
       });
       console.log(send.data);
-    
-    
-    
+      alert('Registration Success ,Please Check ur email')
+       navigate('/');
+       
     
     }catch(err){
+      alert('User Exist')
       console.log(err)
+      
     }
   }
 

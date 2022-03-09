@@ -4,7 +4,7 @@ import {Routes,Route} from 'react-router-dom';
 import { Signup } from './Signup';
 import { Login } from './Login';
 import {ForgotPas} from "./ForgotPas";
-
+import NewPass  from "./NewPass";
 function App() {
 
 
@@ -14,6 +14,7 @@ function App() {
 
 <Route path="/Signup" element={<Signup></Signup>} ></Route>
 <Route path="/ForgotPas" element={<ForgotPas></ForgotPas>}></Route>
+<Route path="/newpass" element={<NewPass></NewPass>}></Route>
 <Route path="/"  element={<Login></Login>}></Route>
 
 </Routes>
