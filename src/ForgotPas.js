@@ -29,7 +29,7 @@ export function ForgotPas(){
         <div id="formContent">
 
            <form onSubmit={handleEmail}>
-            <input type="email" id="login" className="fadeIn second" name="Email" placeholder="name" required={true} onChange={e=>setEmail(e.target.value)}></input>
+            <input type="email" id="login" className="fadeIn second" name="Email" placeholder="email" required={true} onChange={e=>setEmail(e.target.value)}></input>
             <input type="submit" className="fadeIn fourth" value="Verify"></input>
             </form>
 

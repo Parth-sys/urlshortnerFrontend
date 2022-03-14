@@ -58,13 +58,13 @@ return(
         <input type="password" id="password" className="fadeIn third" name="login" placeholder="password" required={true} onChange={e=>setpassword(e.target.value)}></input>
         
         
-        <input type="submit" className="fadeIn fourth" value="Log In"></input>
+        <input type="submit" className="fadeIn fourth" value="Sign Up"></input>
       </form>
   
       
       <div id="formFooter">
         <Link to={"/ForgotPas"} >Have already an account?</Link>
-        <Link to={"/"} >LogIn</Link>
+        <Link to={"/"} >LogIN</Link>
       </div>
   
     </div>
